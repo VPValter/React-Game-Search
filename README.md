@@ -9,11 +9,9 @@
 
 ## Future plans:
 - [ ] Exception handling and QA.
-- [ ] Figuring out pagination, since it only shows first 10 results.
+- [ ] Figuring out pagination, since it only shows first 12 results.
 - [ ] Better CSS styling.
 
-### View live using GitHub Pages:
-https://vpvalter.github.io/Game-Search-React
 
 *Day 12 of my 2nd round of the #100DaysOfCode challenge*
 
