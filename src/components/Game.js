@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import fetchJsonp from 'fetch-jsonp';
+// import noImage from '../no_image.jpg';
 
 export class Game extends Component {
   state = {
@@ -18,8 +19,8 @@ export class Game extends Component {
 
     fetchJsonp(
       'https://www.giantbomb.com/api/game/' +
-      gameId +
-      '/?api_key=ec164f3e4ebfe95b8f71fde3a5b2562480e35db4&format=jsonp',
+        gameId +
+        '/?api_key=ec164f3e4ebfe95b8f71fde3a5b2562480e35db4&format=jsonp',
       { jsonpCallback: 'json_callback' }
     )
       .then(res => res.json())
@@ -38,28 +39,47 @@ export class Game extends Component {
   }
 
   render() {
-    const platforms = this.state.platforms.map(plat => <span key={plat.id}>{plat.name}</span>);
-    const genres = this.state.genres.map(genre => <span key={genre.id}>{genre.name}</span>);
-    const devlist = this.state.devs.map(dev => <span key={dev.id}>{dev.name}</span>);
-    const publist = this.state.publishers.map(pub => <span key={pub.id}>{pub.name}</span>);
+    const platforms = this.state.platforms
+      ? this.state.platforms.map(plat => <span key={plat.id}>{plat.name}</span>)
+      : 'N/A';
+    const genres = this.state.genres
+      ? this.state.genres.map(genre => <span key={genre.id}>{genre.name}</span>)
+      : 'N/A';
+    const devlist = this.state.devs
+      ? this.state.devs.map(dev => <span key={dev.id}>{dev.name}</span>)
+      : 'N/A';
+    const publist = this.state.publishers
+      ? this.state.publishers.map(pub => <span key={pub.id}>{pub.name}</span>)
+      : 'N/A';
     return (
-      <div className='game-details' style={{ backgroundImage: `url(${this.state.images.original_url})` }}>
-        <div className="game-details-inner">
-          <img src={this.state.images.small_url} alt={this.state.game.name} />
-          <div className="details-right">
+      <div
+        className='game-details'
+        style={{ backgroundImage: `url(${this.state.images.original_url})` }}
+      >
+        <div className='game-details-inner'>
+          <img
+            src={this.state.images.small_url}
+            alt={this.state.game.name}
+          />
+          <div className='details-right'>
             <Link to='/'>Go Back Home</Link>
             <h1>{this.state.game.name}</h1>
-            <p>{this.state.game.deck}</p>
+            <p>{this.state.game.deck || 'No description available'}</p>
             <h5>Platforms:</h5>
-            {platforms}<br></br>
+            {platforms}
+            <br></br>
             <h5>Genres:</h5>
-            {genres}<br></br>
+            {genres}
+            <br></br>
             <h5>Developers:</h5>
-            {devlist}<br></br>
+            {devlist}
+            <br></br>
             <h5>Publishers:</h5>
-            {publist}<br></br>
+            {publist}
+            <br></br>
             <h5>Expected Release Year:</h5>
-            {this.state.game.expected_release_year}<br></br>
+            {this.state.game.expected_release_year || 'N/A'}
+            <br></br>
           </div>
         </div>
       </div>
