@@ -9,12 +9,11 @@
 * It only has basic styling for now, since the main focus of this project is learning React and API connectivity.
 
 ## Future plans /  TODO:
-- [ ] Exception handling and QA.
-- [ ] Figuring out pagination, since it only shows first 12 results.
-- [ ] Better CSS styling.
+- [x] QA / Better exception handling
+- [x] Figuring out pagination, since it only shows first 12 results
+- [ ] Better CSS styling & possible UI improvements.
 
 ### You can see it live here:
 https://giantbomb-react-search.netlify.com/
 
-*Day 12 of my 2nd round of the #100DaysOfCode challenge*
-
+*First version done on Day 12 of my 2nd round of the #100DaysOfCode challenge*

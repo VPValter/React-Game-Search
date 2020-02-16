@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 // import noImage from '../no_image.jpg';
 
-export class GameListItem extends Component {
+class GameListItem extends Component {
   render() {
     return (
       <div className='game-list-item'>

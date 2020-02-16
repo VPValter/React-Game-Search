@@ -185,3 +185,14 @@ a {
     padding: 1em;
   }
 }
+
+.pager {
+  margin-bottom: 2em;
+}
+.pager > span {
+  cursor: pointer;
+  padding: 0.8em 1em;
+  border: 2px solid #fff;
+  margin: 0 0.5em;
+  display: inline-block;
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import fetchJsonp from 'fetch-jsonp';
 // import noImage from '../no_image.jpg';
 
-export class Game extends Component {
+class Game extends Component {
   state = {
     game: '',
     images: '',
