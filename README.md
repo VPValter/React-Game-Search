@@ -14,6 +14,6 @@
 - [ ] Better CSS styling & possible UI improvements.
 
 ### You can see it live here:
-https://giantbomb-react-search.netlify.com/
+https://giantbomb-react-search.netlify.app
 
 *First version done on Day 12 of my 2nd round of the #100DaysOfCode challenge*
